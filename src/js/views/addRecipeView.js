@@ -4,7 +4,7 @@ import icons from "url:../../img/icons.svg";
 class AddRecipeView extends View {
   _parentElement = document.querySelector(".upload");
   _errorMessage = "Wrong ingredient format! Please use the correct format :)";
-  _message = "Recipe was created successfully :)";
+  _message = "Recipe was successfully uploaded :)";
 
   _btnOpen = document.querySelector(".nav__btn--add-recipe");
   _btnClose = document.querySelector(".btn--close-modal");
@@ -40,7 +40,7 @@ class AddRecipeView extends View {
       handler(data);
     });
   }
-  _generateMarkup() {}
+  // _generateMarkup() {}
 }
 
 export default new AddRecipeView();

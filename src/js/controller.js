@@ -126,13 +126,14 @@ const controlAddRecipe = async function (newRecipe) {
     }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     console.error(err);
-    addRecipeView.renderError();
+    addRecipeView.renderError(err.message);
   }
-
-  const newFeature = function () {
-    console.log("Welcome to the application");
-  };
 };
+
+const newFeature = function () {
+  console.log("Welcome to the application");
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
